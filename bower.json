@@ -1,0 +1,22 @@
+{
+  "name": "fastenate",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kasona/fastenate",
+  "authors": [
+    "kasi <kasionaga@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2"
+  }
+}
