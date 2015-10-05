@@ -2638,61 +2638,93 @@ html body {
   height: 100%; }
 
 /* line 23, stdin */
-.container {
+.main {
   min-height: 100%;
   margin-bottom: -142px;
   margin: 0; }
 
 /* line 28, stdin */
-.container:after {
+.main:after {
   content: "";
   display: block;
   margin: 0; }
 
 /* line 33, stdin */
-.footer, .container:after {
+.footer, .main:after {
   height: 142px;
   margin: 0; }
 
-/* line 37, stdin */
-.footer {
-  background-image: url("/assets/facebook_grey.svg");
-  background-repeat: no-repeat;
-  height: 30px;
-  background-position: center center;
-  background-color: #353537; }
+@media only screen and (min-width: 64.0625em) {
+  /* line 38, stdin */
+  .footer {
+    height: 30px;
+    background-color: #353537;
+    margin: auto;
+    text-align: center; }
+    /* line 45, stdin */
+    .footer .hidden {
+      display: none; }
+    /* line 48, stdin */
+    .footer .container {
+      width: 50px;
+      display: inline-block; }
+    /* line 52, stdin */
+    .footer .container:hover .visible {
+      display: none; }
+    /* line 55, stdin */
+    .footer .container:hover .hidden {
+      display: block; }
+    /* line 58, stdin */
+    .footer .hidden, .footer .visible {
+      width: 50px; } }
 
-/* line 46, stdin */
+/* line 66, stdin */
 header.top {
   background-image: url("/assets/header_bg.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #FFF;
   height: 55px; }
-  /* line 53, stdin */
+  /* line 73, stdin */
   header.top h1 {
     background-image: url("/assets/logo.svg");
     background-repeat: no-repeat;
     background-position: center center;
     height: 50px;
     margin-top: 0; }
-    /* line 59, stdin */
+    /* line 79, stdin */
     header.top h1 span {
       visibility: hidden; }
 
-/* line 66, stdin */
+/* line 86, stdin */
 .nav {
   background-color: #353537;
   height: 30px;
   width: auto;
   text-align: center; }
-  /* line 72, stdin */
+  /* line 92, stdin */
   .nav h2 {
     padding-top: 2px;
     color: #818285;
     margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 16px;
     display: inline-block; }
-    /* line 78, stdin */
+    /* line 100, stdin */
     .nav h2:nth-child(n+2):before {
       content: ' • '; }
+    /* line 103, stdin */
+    .nav h2:hover {
+      color: #FF4200; }
+
+/* line 112, stdin */
+.row .box {
+  border: 5px solid #FFF;
+  margin: 15px;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  /* line 118, stdin */
+  .row .box:hover {
+    border-color: #FF8F00; }

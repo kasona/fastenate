@@ -20,26 +20,46 @@ html body {
 }
 
 // ================== footer ===========================
-.container {
+.main {
   min-height: 100%;
   margin-bottom: $margin-bottom;
   margin:0;
 }
-.container:after{
+.main:after {
   content:"";
   display: block;
   margin:0;
 }
-.footer, .container:after {
+.footer, .main:after {
   height: 142px;
   margin:0;
 }
+
 .footer {
-  background-image: url('/assets/facebook_grey.svg');
-  background-repeat: no-repeat;
-  height: 30px;
-  background-position: center center;
-  background-color: #353537;
+@media #{$large} {
+
+    height: 30px;
+    background-color: #353537;
+    margin: auto;
+    text-align: center;
+    .hidden {
+        display: none;
+    }
+    .container {
+    width: 50px;
+    display: inline-block;
+    }
+    .container:hover .visible {
+        display: none;
+    }
+    .container:hover .hidden {
+        display: block;
+    }
+    .hidden, .visible {
+      width: 50px;
+    }
+  }
+
 }
 
 // ===================== header =========================
@@ -73,10 +93,31 @@ header.top {
     padding-top: 2px;
     color: #818285;
     margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 16px;
     display: inline-block;
     &:nth-child(n+2):before {
       content: ' • ';
     }
+    &:hover{
+      color:#FF4200;
     }
+    }
+}
+
+// ============== boxes =======================
+.row {
+
+  .box{
+  border: 5px solid #FFF;
+  margin: 15px;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &:hover{
+    border-color: #FF8F00;
+  }
+  }
+
 }
