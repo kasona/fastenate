@@ -19,6 +19,92 @@ html body {
   height: 100%;
 }
 
+
+// ===================== header =========================
+header.top {
+    background-image: url('/assets/header_bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #FFF;
+    height: 55px;
+}
+ header.top h1 {
+  background-image: url('/assets/logo.svg'), url('/assets/header_bg.svg');
+  background-repeat: no-repeat;
+  height: 60px;
+  background-color: #FFF;
+  margin-top: 0;
+  margin-bottom:0;
+
+  @media #{$small} {
+    background-position:left;
+  }
+  @media #{$medium} {
+    background-position: center center;
+  }
+  @media #{$large} {
+    background-position: center center;
+  }
+  // for blind users
+  span {
+    visibility: hidden;
+  }
+}
+
+
+// =================== nav =============================
+.nav {
+  background-color: #353537;
+  height: 30px;
+  width: auto;
+  text-align:center;
+  margin: 0;
+
+  h2 {
+    padding-top: 2px;
+    color: #818285;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    display: inline-block;
+      &:nth-child(n+2):before {
+        content: '  •  ';
+      }
+        &:hover {
+          color:#FF4200;
+        }
+    }
+  }
+
+// ============== boxes =======================
+
+.panel {
+  border: 5px solid #FFF;
+  margin: 15px;
+  background-color: #FFF;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom:auto
+  &:hover {
+    border-color: #FF8F00;
+  }
+
+  #title {
+  font-size: 14px;
+  // border: 5px solid pink;
+  text-align: center;
+  width : 350px;
+  display: inline-block;
+  height: 50px;
+
+  }
+  #pic {
+  background-size: cover;
+    // width: 200px;
+    height: 250px;
+  }
+}
 // ================== footer ===========================
 .main {
   min-height: 100%;
@@ -36,18 +122,17 @@ html body {
 }
 
 .footer {
-@media #{$large} {
-
+  @media #{$large} {
     height: 30px;
     background-color: #353537;
     margin: auto;
     text-align: center;
-    .hidden {
+      .hidden {
         display: none;
-    }
+      }
     .container {
-    width: 50px;
-    display: inline-block;
+      width: 50px;
+      display: inline-block;
     }
     .container:hover .visible {
         display: none;
@@ -59,65 +144,4 @@ html body {
       width: 50px;
     }
   }
-
-}
-
-// ===================== header =========================
-header.top {
-  background-image: url('/assets/header_bg.svg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #FFF;
-  height: 55px;
-
-  h1 {
-    background-image: url('/assets/logo.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 50px;
-    margin-top: 0;
-    span {
-      visibility: hidden;
-    }
-  }
-}
-
-// =================== nav =============================
-.nav {
-  background-color: #353537;
-  height: 30px;
-  width: auto;
-  text-align:center;
-
-  h2 {
-    padding-top: 2px;
-    color: #818285;
-    margin: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 16px;
-    display: inline-block;
-    &:nth-child(n+2):before {
-      content: ' • ';
-    }
-    &:hover{
-      color:#FF4200;
-    }
-    }
-}
-
-// ============== boxes =======================
-.row {
-
-  .box{
-  border: 5px solid #FFF;
-  margin: 15px;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  &:hover{
-    border-color: #FF8F00;
-  }
-  }
-
 }

@@ -2637,72 +2637,46 @@ html body {
   background-image: url("/assets/bg.jpg");
   height: 100%; }
 
-/* line 23, stdin */
-.main {
-  min-height: 100%;
-  margin-bottom: -142px;
-  margin: 0; }
-
-/* line 28, stdin */
-.main:after {
-  content: "";
-  display: block;
-  margin: 0; }
-
-/* line 33, stdin */
-.footer, .main:after {
-  height: 142px;
-  margin: 0; }
-
-@media only screen and (min-width: 64.0625em) {
-  /* line 38, stdin */
-  .footer {
-    height: 30px;
-    background-color: #353537;
-    margin: auto;
-    text-align: center; }
-    /* line 45, stdin */
-    .footer .hidden {
-      display: none; }
-    /* line 48, stdin */
-    .footer .container {
-      width: 50px;
-      display: inline-block; }
-    /* line 52, stdin */
-    .footer .container:hover .visible {
-      display: none; }
-    /* line 55, stdin */
-    .footer .container:hover .hidden {
-      display: block; }
-    /* line 58, stdin */
-    .footer .hidden, .footer .visible {
-      width: 50px; } }
-
-/* line 66, stdin */
+/* line 24, stdin */
 header.top {
   background-image: url("/assets/header_bg.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #FFF;
   height: 55px; }
-  /* line 73, stdin */
-  header.top h1 {
-    background-image: url("/assets/logo.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 50px;
-    margin-top: 0; }
-    /* line 79, stdin */
-    header.top h1 span {
-      visibility: hidden; }
 
-/* line 86, stdin */
+/* line 31, stdin */
+header.top h1 {
+  background-image: url("/assets/logo.svg"), url("/assets/header_bg.svg");
+  background-repeat: no-repeat;
+  height: 60px;
+  background-color: #FFF;
+  margin-top: 0;
+  margin-bottom: 0; }
+  @media only screen and (min-width: 40.0625em) {
+    /* line 31, stdin */
+    header.top h1 {
+      background-position: left; } }
+  @media only screen and (min-width: 40.0625em) {
+    /* line 31, stdin */
+    header.top h1 {
+      background-position: center center; } }
+  @media only screen and (min-width: 64.0625em) {
+    /* line 31, stdin */
+    header.top h1 {
+      background-position: center center; } }
+  /* line 49, stdin */
+  header.top h1 span {
+    visibility: hidden; }
+
+/* line 56, stdin */
 .nav {
   background-color: #353537;
   height: 30px;
   width: auto;
-  text-align: center; }
-  /* line 92, stdin */
+  text-align: center;
+  margin: 0; }
+  /* line 63, stdin */
   .nav h2 {
     padding-top: 2px;
     color: #818285;
@@ -2711,20 +2685,73 @@ header.top {
     padding-right: 5px;
     font-size: 16px;
     display: inline-block; }
-    /* line 100, stdin */
+    /* line 71, stdin */
     .nav h2:nth-child(n+2):before {
-      content: ' • '; }
-    /* line 103, stdin */
+      content: '  •  '; }
+    /* line 74, stdin */
     .nav h2:hover {
       color: #FF4200; }
 
-/* line 112, stdin */
-.row .box {
+/* line 82, stdin */
+.panel {
   border: 5px solid #FFF;
   margin: 15px;
+  background-color: #FFF;
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px; }
-  /* line 118, stdin */
-  .row .box:hover {
+  padding-top: 5px; }
+  /* line 89, stdin */
+  padding-bottom:auto
+.panel:hover {
     border-color: #FF8F00; }
+  /* line 93, stdin */
+  .panel #title {
+    font-size: 14px;
+    text-align: center;
+    width: 350px;
+    display: inline-block;
+    height: 50px; }
+  /* line 102, stdin */
+  .panel #pic {
+    background-size: cover;
+    height: 250px; }
+
+/* line 109, stdin */
+.main {
+  min-height: 100%;
+  margin-bottom: -142px;
+  margin: 0; }
+
+/* line 114, stdin */
+.main:after {
+  content: "";
+  display: block;
+  margin: 0; }
+
+/* line 119, stdin */
+.footer, .main:after {
+  height: 142px;
+  margin: 0; }
+
+@media only screen and (min-width: 64.0625em) {
+  /* line 124, stdin */
+  .footer {
+    height: 30px;
+    background-color: #353537;
+    margin: auto;
+    text-align: center; }
+    /* line 130, stdin */
+    .footer .hidden {
+      display: none; }
+    /* line 133, stdin */
+    .footer .container {
+      width: 50px;
+      display: inline-block; }
+    /* line 137, stdin */
+    .footer .container:hover .visible {
+      display: none; }
+    /* line 140, stdin */
+    .footer .container:hover .hidden {
+      display: block; }
+    /* line 143, stdin */
+    .footer .hidden, .footer .visible {
+      width: 50px; } }

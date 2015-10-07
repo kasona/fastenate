@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fastenate | The World's Most Awesome Board of Stuff</title>
   <link rel="stylesheet" href="styles/styles.css">
+    <title>
+      Fastenate | The World's Most Awesome Board of Stuff
+    </title>
 </head>
+
 <body>
 <div class="main">
 
@@ -16,16 +19,31 @@
     </span>
   </header>
   </h1>
+
 <!-- Nav -->
   <div class="nav">
-    <h2>RANDOM</h2>
-    <h2>MY BOARDS</h2>
-    <h2>GET THE APP</h2>
+    <h2>
+      <a herf="#" onclick="loadBoard('random')">
+        RANDOM
+      </a>
+    </h2>
+    <h2>
+      <a herf="#" id="boards" onclick="loadBoard('my_boards')">
+        MY BOARDS
+      </a>
+    </h2>
+    <h2>
+      <a herf="#" onclick="loadBoard('get_the_app')">
+        GET THE APP
+      </a>
+    </h2>
   </div>
 
+<!-- Boxes made via JS -->
+<div class="boxes" id="boxes"></div>
 
 <!-- Boxes -->
-<div class="row">
+<!-- <div class="row">
 
     <div class="large-6 medium-6 small-12 columns">
       <div class="box">
@@ -52,11 +70,7 @@
     </div>
 
   </div>
-
-
-
-
-
+ -->
 
 
 
